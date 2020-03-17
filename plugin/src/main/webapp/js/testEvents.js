@@ -62,12 +62,15 @@ var TestRun = (function($) {
 						+ "Failures : <span class='stat' id='"
 						+ this.failuresId + "'>0</span><div id='"
 						+ this.progressId + "'></div></fieldset>"
-						+ "<div class='noWrapContainer'><div id='" + this.treeId
-						+ "' class='ztree'></div>"
+						+ "<div class='noWrapContainer'>" +
+								"<div id='" + this.treeId + "' class='ztree'></div></td><td>" +
+								"<div class='provolone' id='"	+ this.panelProvoloneId + "'>" +
+									"<iframe src='http://localhost:8082/SessionInitializer' scrolling='yes' frameborder='0' width='100%' height='100%'>" +
+								"</div></div>"
 						+ "<div class='stacktrace' id='"
 						+ this.panelStackTraceId + "'><div id='"
 						+ this.stackTraceId + "'></div></div></fieldset>"
-						+ "</div></div>");
+						+ "</div>");
 		this.createScrollLockButton();
 	}
 	TestRun.prototype = {
